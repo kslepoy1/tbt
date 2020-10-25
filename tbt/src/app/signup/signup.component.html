@@ -1,0 +1,29 @@
+<div class = "page-box"
+fxLayout="column" 
+fxLayoutAlign="space-around center" 
+fxFill >
+    <form [formGroup]="form">
+        <div class = "form-field-container" 
+         >
+            <div class ="name">
+                name <br>
+                <textarea matInput type = "text" formControlName  = "name" required> </textarea>
+            </div>
+            <div class ="major" >
+                major/college <br>
+                <textarea matInput type = "text" formControlName  ="major" required> </textarea>
+            </div>
+            <div class ="picture" >
+                profile picture <br>
+                <input matInput type = "file" formControlName  = "image" > 
+            </div>
+            <div clas = "arrow">
+                <a (click)="this.continue($event)">
+                    <img src="assets/arrow.png">
+                </a>
+            </div>
+
+
+        </div>
+    </form>
+</div>

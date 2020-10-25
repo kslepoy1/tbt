@@ -1,0 +1,34 @@
+<div class = "page-box"
+fxLayout="row" 
+ fxLayoutAlign="space-around center" 
+ fxFill >
+ <div class  = "buttons">
+    <mat-button-toggle-group  #community="matButtonToggleGroup" 
+    multiple="true"
+    (change)="onValueChange(community.value)"
+    vertical="true"
+    >
+    <mat-button-toggle *ngFor="let item of communities" 
+        [value]="item">{{item}}</mat-button-toggle>
+</mat-button-toggle-group>
+</div>
+    <div class = "info"
+    fxLayout="column" 
+    fxLayoutAlign="space-around center" >
+        <div>
+            <p>
+            Choosing communities will help you match with clubs, study groups, mentors, and scholarships that
+            have been flagged with the same community. All users will automatically see posts flagged "general,"
+            and your communities will not appear on your profile. Communtities can be changed later in settings.
+            </p>
+        </div>
+        <br>
+        
+    </div>
+    <div class = "arrow">
+            <a href = "/events">
+                <img src = "assets/arrow.png">
+            </a>
+    </div>
+    
+</div>

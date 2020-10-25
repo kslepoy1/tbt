@@ -1,0 +1,29 @@
+.buttons{
+    width: 50%;
+    display: inline-flex;
+}
+.mat-button-toggle-group {
+    width: 50%;
+    margin: auto;
+}
+.mat-button-toggle{
+    background: #79BAF7;
+    border-radius: 15px;
+    margin: 10px;
+}
+.mat-button-toggle-checked{
+    background: #137CDC;
+    border: 1px solid #FBFF31;
+    box-sizing: border-box;
+}
+.info {
+    width: 30%;
+    display: inline-flex;
+    font-size: 24px;
+    text-align: center;
+
+}
+.arrow{
+    width: 50%;
+    margin: auto;
+}

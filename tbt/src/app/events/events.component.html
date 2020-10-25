@@ -1,0 +1,42 @@
+<app-footer></app-footer>
+
+<div class = "page-box">
+    <div class = "info">
+        <h1>events</h1>
+        You will see events that are flagged with communities 
+        you joined when you signed up.
+        You will also see all events marked "general."
+        Click the arrow above the event to chat with the event creator!
+        <br>
+        <br>
+        create event
+        <br>
+        <img src ="assets/arrow.png">
+    </div>
+    <div class ="events-box">
+        
+        
+        <div class ="event" *ngFor="let item of events">
+            <div class = "posterinfo">
+                <div class = "poster">
+                    {{item.postedBy}}
+                </div>
+                <div class = "chat">
+                    <img src = "assets/arrow.png">
+                </div>
+            </div>
+            <div class = "small-box">
+                <div class = "title">
+                        {{item.title}}
+                </div>
+                <div class = "location">
+                        {{item.location}} <br>
+                        {{item.time}}
+                </div>
+            </div> 
+            <div class = "communities" *ngFor="let com of item.communities">
+                {{com}}
+            </div>
+        </div>
+    </div>
+</div>

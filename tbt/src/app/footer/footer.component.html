@@ -1,0 +1,6 @@
+<mat-button-toggle-group
+    #tab="matButtonToggleGroup"
+    (change)="onValueChange(tab.value)">
+    <mat-button-toggle  *ngFor="let item of options" 
+        [value]="item">{{item}}</mat-button-toggle>
+</mat-button-toggle-group>
