@@ -12,11 +12,13 @@ import javax.persistence.Table;
 public class EventCommunities {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
+	
     @Column(name = "event_id")
     private Integer eventId;
 
     @Column(name = "community_id")
-    private Integer community_id;
+    private Integer communityId;
 
 	public Integer getEventId() {
 		return eventId;
@@ -26,13 +28,15 @@ public class EventCommunities {
 		this.eventId = eventId;
 	}
 
-	public Integer getCommunity_id() {
-		return community_id;
+	public Integer getCommunityId() {
+		return communityId;
 	}
 
-	public void setCommunity_id(Integer community_id) {
-		this.community_id = community_id;
+	public void setCommunityId(Integer communityId) {
+		this.communityId = communityId;
 	}
+
+	
     
     
     

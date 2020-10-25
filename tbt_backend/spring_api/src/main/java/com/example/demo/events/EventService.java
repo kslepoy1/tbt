@@ -30,8 +30,8 @@ public class EventService {
 		Event s = repo.save(event);
 		for (Integer community: entity.getCommunities()) {
 			EventCommunities e = new EventCommunities();
+			e.setCommunityId(community);
 			e.setEventId(s.getId());
-			e.setCommunity_id(community);
 			ecrepo.save(e);
 		}
 		return s;

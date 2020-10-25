@@ -11,11 +11,10 @@ import org.springframework.data.repository.query.Param;
 public interface EventRepository extends JpaRepository<Event, Integer> {
 
 	@Query(
-			value = "select e from events e, event_communtites ec "
+			value = "select e from Event e, EventCommunities ec "
 			+ " where e.school = :school "
-			+ " and ec.event_id = e.id and "
-			+ " ec.community_id IN :communities",
-			nativeQuery = true)
+			+ " and ec.eventId = e.id and "
+			+ " ec.communityId IN :communities")
 	public List<Event> findBySchoolAndCommunities(@Param("school")String school, @Param("communities") Collection<Integer> communities);
 	
 }

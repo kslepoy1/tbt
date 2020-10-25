@@ -24,7 +24,7 @@ public class Event {
     @Column(name = "location")
     private String location;
     
-    @Column(name = "postedBy")
+    @Column(name = "posted_by")
     private String postedBy;
     
     @Column(name = "school")
